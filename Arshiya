@@ -1,1 +1,352 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARSHIYA V2RAY</title>
 
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:#050505;
+    color:white;
+    font-family:Arial,Tahoma,sans-serif;
+}
+
+.container{
+    width:92%;
+    max-width:850px;
+    margin:30px auto;
+}
+
+.header{
+    text-align:center;
+    padding:25px;
+    margin-bottom:20px;
+}
+
+.logo{
+    font-size:36px;
+    font-weight:bold;
+    color:#ff2020;
+    text-shadow:0 0 20px #ff0000;
+}
+
+.subtitle{
+    color:#999;
+    margin-top:10px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #333;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 0 25px rgba(255,0,0,.12);
+}
+
+.title{
+    color:#ff3333;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.box{
+    background:#080808;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:15px;
+}
+
+.box small{
+    color:#777;
+    display:block;
+    margin-bottom:7px;
+}
+
+.active{
+    color:#35ff67;
+}
+
+.uuid{
+    background:#080808;
+    border:1px dashed #444;
+    border-radius:12px;
+    padding:15px;
+    direction:ltr;
+    text-align:center;
+    word-break:break-all;
+    color:#ddd;
+}
+
+.subscription{
+    background:#080808;
+    border:1px solid #292929;
+    border-radius:15px;
+    padding:15px;
+    margin-top:12px;
+}
+
+.subscription h3{
+    margin:0 0 10px;
+    color:#ff4545;
+}
+
+.link{
+    background:#030303;
+    border:1px solid #333;
+    border-radius:10px;
+    padding:12px;
+    direction:ltr;
+    text-align:left;
+    word-break:break-all;
+    color:#aaa;
+    font-size:12px;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+button{
+    flex:1;
+    border:0;
+    border-radius:10px;
+    padding:12px;
+    background:#c40000;
+    color:white;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ed0000;
+}
+
+.footer{
+    text-align:center;
+    color:#666;
+    padding:20px;
+    font-size:12px;
+}
+
+@media(max-width:600px){
+    .info{
+        grid-template-columns:1fr;
+    }
+
+    .logo{
+        font-size:28px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+    <div class="logo">𝐀𝐑𝐒𝐇𝐈𝐘𝐀</div>
+    <div class="subtitle">V2RAY / XRAY PANEL</div>
+</div>
+
+<div class="card">
+
+<div class="title">📊 اطلاعات سرویس</div>
+
+<div class="info">
+
+<div class="box">
+<small>وضعیت</small>
+<span class="active">● فعال</span>
+</div>
+
+<div class="box">
+<small>نوع اتصال</small>
+<span>VLESS / Trojan</span>
+</div>
+
+<div class="box">
+<small>اپلیکیشن</small>
+<span>Xray</span>
+</div>
+
+<div class="box">
+<small>نام سرویس</small>
+<span>ARSHIYA</span>
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<div class="title">🔐 UUID</div>
+
+<div class="uuid" id="uuid">
+e88b6b04-111c-4944-a5ce-bb9fb84a8bf6
+</div>
+
+<div class="buttons">
+<button onclick="copyUUID()">📋 کپی UUID</button>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="title">⚡ Subscription</div>
+
+
+<div class="subscription">
+
+<h3>Raw</h3>
+
+<div class="link" id="raw">
+https://netra-938668.arsiyaesmailpour.workers.dev/ee8c0d27c0d2/sub/raw?app=xray
+</div>
+
+<div class="buttons">
+<button onclick="copyLink('raw')">کپی</button>
+<button onclick="openLink('raw')">باز کردن</button>
+</div>
+
+</div>
+
+
+<div class="subscription">
+
+<h3>Normal</h3>
+
+<div class="link" id="normal">
+https://netra-938668.arsiyaesmailpour.workers.dev/ee8c0d27c0d2/sub/normal?app=xray
+</div>
+
+<div class="buttons">
+<button onclick="copyLink('normal')">کپی</button>
+<button onclick="openLink('normal')">باز کردن</button>
+</div>
+
+</div>
+
+
+<div class="subscription">
+
+<h3>Fragment</h3>
+
+<div class="link" id="fragment">
+https://netra-938668.arsiyaesmailpour.workers.dev/ee8c0d27c0d2/sub/fragment?app=xray
+</div>
+
+<div class="buttons">
+<button onclick="copyLink('fragment')">کپی</button>
+<button onclick="openLink('fragment')">باز کردن</button>
+</div>
+
+</div>
+
+
+<div class="subscription">
+
+<h3>WARP</h3>
+
+<div class="link" id="warp">
+https://netra-938668.arsiyaesmailpour.workers.dev/ee8c0d27c0d2/sub/warp?app=xray
+</div>
+
+<div class="buttons">
+<button onclick="copyLink('warp')">کپی</button>
+<button onclick="openLink('warp')">باز کردن</button>
+</div>
+
+</div>
+
+
+<div class="subscription">
+
+<h3>WARP PRO</h3>
+
+<div class="link" id="warpPro">
+https://netra-938668.arsiyaesmailpour.workers.dev/ee8c0d27c0d2/sub/warp-pro?app=xray
+</div>
+
+<div class="buttons">
+<button onclick="copyLink('warpPro')">کپی</button>
+<button onclick="openLink('warpPro')">باز کردن</button>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+ARSHIYA V2RAY PANEL
+<br>
+Xray Subscription
+</div>
+
+</div>
+
+
+<script>
+
+function copyText(text){
+    if(navigator.clipboard){
+        navigator.clipboard.writeText(text);
+    }else{
+        var area=document.createElement("textarea");
+        area.value=text;
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand("copy");
+        document.body.removeChild(area);
+    }
+
+    alert("کپی شد ✅");
+}
+
+
+function copyUUID(){
+    var text=document.getElementById("uuid").innerText.trim();
+    copyText(text);
+}
+
+
+function copyLink(id){
+    var text=document.getElementById(id).innerText.trim();
+    copyText(text);
+}
+
+
+function openLink(id){
+    var link=document.getElementById(id).innerText.trim();
+    window.open(link,"_blank");
+}
+
+</script>
+
+</body>
+</html>
